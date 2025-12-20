@@ -1,3 +1,4 @@
+import { IDoctorSchedule } from "./schedule.interface";
 
 export interface IDoctor {
     id?: string;
@@ -22,10 +23,12 @@ export interface IDoctor {
     updatedAt?: string;
     doctorSpecialties?: Array<{
         specialitiesId: string;
-        specialties?: {
+        specialities?: {
             id: string;
             title: string;
             icon?: string;
         };
     }>;
+
+    doctorSchedules?: IDoctorSchedule[];
 }
